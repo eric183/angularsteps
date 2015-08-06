@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angularjs[1-7]</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <nav class="header">
+        <ul>
+            <li><a href="#/">first</a></li>
+            <li><a href="#/second">second</a></li>
+            <li><a href="#/third">third</a></li>
+            <li><a href="#/fourth">fourth</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div ng-view class="center"></div>
+    </div>
+</body>
+
+</html>
