@@ -1,1 +1,47 @@
- <h1>怎样开始(第一步AngularJS-七步菜鸟到专家)</h1>
+<h1>怎样开始(第一步AngularJS-七步菜鸟到专家)</h1>
+<p>AngularJS 重新定义了前端应用的开发。它为跨越HTML与JavaScript的开发边界，提供了有效的解决方案。 许多像Backbone、EmberJS的前端应用框架等，都要求开发者拓展此框架特有的一些JavaScript对象。虽然这样的作法有它一定的价值，但它不必要地污染了对象空间并且还要求开发者去了解内存里抽象对象。但我们还是接受了这种方式，因为网络最初的设计已无法提供我们今天所期待的交互，于是我们需要框架来帮我们填补JavaScript和HTML之间难以跨越的鸿沟。
+</p>
+<p><strong>AngularJS的出现填上了这个坑。</strong></p>
+<p>给DOM标注上元数据（即AngularJS里的directive们），然后让Angular来帮你操纵DOM，用这种方式代替传统的直接操作DOM。
+</p>
+<p>且，AngularJS不依赖（也不阻挠使用）任何其他的框架。你甚至可以直接在一个非AngularJS框架下开发一些AngularJS应用。</p>
+<p>就这么好使</p>
+<p>看起来很帅？是的。通过这个七个部分的系列教程，我们会带着你用AngularJS写很厉害的应用——即使你之前从来没有接触过它。
+</p>
+<p>跟着我们的脚步，我们会教你成为一个专家级的AngularJS开发者。
+    <h1>先说重要的:什么时候该用AngularJS？</h1>
+</p>
+AngularJS是一个最理想客户端单页面应用MV*开发框架。它是用来开发动态页面的框架，而不是一个库。它专注于扩展HTML与提供动态的数据绑定，而且它还能跟其它框架协作（如jQuery）。
+<p>如果你要开发的是单页应用，那么AngularJS对你来说就完美适用了。Gmail、Google Docs、Twitter和Facebook这样的应用，都能用AngularJS高效开发。但是像游戏开发之类要求重度操作DOM、又或者仅仅需要极高运行的应用，则不是AngularJS的用武之地了。
+</p>
+<p>经过一般大致介绍，我们开始AngularJS第一个需要理解的话题</p>
+<h1>1. 如何开始写应用 </h1>
+<p>通过这个系列教程里，我们会开发一个能播放Morning Edition里即时播放的NPR广播播放器。完成版的Demo点<a href="http://www.ng-newsletter.com/code/beginner_series" target="_blank">这里</a>查看
+</p>
+<p>当开始写AngularJS的应用时，我们会将逻辑层和交互层一起写在展示层的一边。</p>
+<p>这样的写法最开始可能会让你觉得很费解，特别是当你使用过其他将其中两个一般独立使用的框架。然而一旦找到诀窍，AngularJS的这种写法对你来说便游刃有余了。
+</p>
+<p>
+    我们来看一个最简单的AngularJS应用：
+</p>
+<pre class="highlight codeexample">
+<table>
+    <tbody>
+        <tr>
+            <td class="code"><span class="cp">&lt;!doctype html&gt;</span>
+    <span class="nt">&lt;html</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;/head&gt;</span>
+        <span class="nt">&lt;body&gt;</span>
+            <span class="nt">&lt;div&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"yourName"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h1&gt;</span>Hello, {{ yourName }}!<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</pre>
